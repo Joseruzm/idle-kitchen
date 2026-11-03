@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idle Kitchen: De Puesto Callejero a Restaurante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Panel principal (HUD)-->
+        <header class="hud">
+            <div class="stat-card">
+                <span class="stat-label">Dinero</span>
+                <span id="money-display" class="stat-value" id="money">0 €</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Platos preparados</span>
+                <span id="dishes-display" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Ingresos</span>
+                <span id="income-display" class="stat-value">0 €/s</span>
+            </div>
+        </header>
+
+        <!-- Estación de cocina (Área de interacción principal)-->
+        <main class="kitchen-station">
+            <div class="dish-target-container">
+                <button id="cook-btn" class="cook-btn" aria-label="Cocinar plato">
+                    <span class="cook-icon" aria-hidden="true">🍳</span>
+                    <span class="cook-text">¡Cocinar!</span>
+                </button>
+            </div>
+        </main>
+
+        <!-- Panel lateral o inferior para mejoras y compras-->
+         <aside id="upgrades-panel" class="upgrades-panel">
+            <h2>Mejoras e ingredientes</h2>
+            <p class="placeholder-text">Proximamente</p>
+         </aside>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
