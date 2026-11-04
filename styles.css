@@ -114,3 +114,85 @@ body {
   font-size: 0.85rem;
   margin-top: 0.5rem;
 }
+
+/* Lista de ingredientes */
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Tarjeta individual de ingrediente */
+.ingredient-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.ingredient-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ingredient-icon {
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.35rem;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+.ingredient-details h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.ingredient-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.ingredient-owned {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Botón de compra */
+.buy-btn {
+  background-color: #2ec4b6;
+  color: #011627;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, opacity 0.15s ease, transform 0.05s ease;
+  touch-action: manipulation;
+}
+
+.buy-btn:not(:disabled):hover {
+  background-color: #3be8d7;
+}
+
+.buy-btn:not(:disabled):active {
+  transform: scale(0.95);
+}
+
+/* Estado bloqueado / sin dinero suficiente */
+.buy-btn:disabled {
+  background-color: #495057;
+  color: #adb5bd;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
